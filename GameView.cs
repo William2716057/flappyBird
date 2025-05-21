@@ -8,7 +8,7 @@ namespace FlappyBird
     {
         private Paint paint = new Paint();
         private float birdY = 500;
-        private float gravity = 3;
+        private float gravity = 1;
         private float velocity = 0;
 
         public GameView(Context context) : base(context)
@@ -18,7 +18,7 @@ namespace FlappyBird
         protected override void OnDraw(Canvas canvas)
         {
             base.OnDraw(canvas);
-
+            canvas.DrawColor(Color.Cyan); //background colour
             velocity += gravity;
             birdY += velocity;
 
